@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruang Kelas</title>
+    <link rel="stylesheet" href="styles/ruangkelas.css" />
+    <script src="scripts/ruangkelas.js" defer></script>
+    <!-- Tambahkan script ini -->
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="gambar/logo_polnep.png" alt="Logo" class="logo" />
+          <span>Sistem Informasi Ruang Kelas</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="denahgdg.html">Denah Gedung</a></li>
+            <li><a href="ruangkelas.html" class="active">Ruang Kelas</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="profile-icon">
+          <a href="login/loginadmin.html">
+            <img src="gambar/login.png" alt="Profile" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Ruang Kelas</h1>
+      <h2>Prodi Teknik Informatika</h2>
+      <div class="dropdown">
+        <button class="dropbtn">Pilih Gedung</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="showTheoreticalBuilding()">Gedung Teori</a>
+          <a href="#" onclick="showLaboratoryBuilding()">Gedung Laboratorium</a>
+        </div>
+      </div>
+      <div class="container">
+        <!-- 14 kotak ruangan -->
+        <!-- Tambahkan class sesuai dengan tipe gedung -->
+        <div class="class-box theoretical" id="ruang_01">
+          <img src="../gambar/foto_ruang/Ti_1/ti_1_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_01.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 01</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_02">
+          <img src="../gambar/foto_ruang/Ti_2/ti_2_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_02.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 02</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_03">
+          <img src="../gambar/foto_ruang/Ti_3/ti_3_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_03.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 03</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_04">
+          <img src="../gambar/foto_ruang/Ti_4/ti_4_2.jpg" alt="Ruang Kelas" />
+          <div class="status unavailable">Unavailable</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_04.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 04</div>
+        </div>
+        <div class="class-box theoretical" id="ruang_05">
+          <img src="../gambar/foto_ruang/Ti_5/ti_5_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_05.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 05</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_06">
+          <img src="../gambar/foto_ruang/Ti_6/ti_6_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_06.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 06</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_07">
+          <img src="../gambar/foto_ruang/Ti_7/ti_7_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_07.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 07</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_08">
+          <img src="../gambar/foto_ruang/Ti_8/ti_8_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_08.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 08</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_09">
+          <img src="../gambar/foto_ruang/Ti_9/ti_9_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_09.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 09</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box theoretical" id="ruang_10">
+          <img src="../gambar/foto_ruang/Ti_10/ti_10_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_10.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 10</div>
+          <!-- Ulangi untuk ruangan lainnya... -->
+        </div>
+        <div class="class-box laboratory" id="ruang_11">
+          <img src="../gambar/foto_ruang/Ti_11/ti_11_2.jpg" alt="Ruang Kelas" />
+          <div class="status available">Available</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_11.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 11</div>
+        </div>
+        <div class="class-box laboratory" id="ruang_12">
+          <img src="../gambar/foto_ruang/Ti_12/ti_12_2.jpg" alt="Ruang Kelas" />
+          <div class="status unavailable">Unavailable</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_12.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 12</div>
+        </div>
+        <div class="class-box laboratory" id="ruang_13">
+          <img src="../gambar/foto_ruang/Ti_13/ti_13_2.jpg" alt="Ruang Kelas" />
+          <div class="status unavailable">Unavailable</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_13.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 13</div>
+        </div>
+        <div class="class-box laboratory" id="ruang_14">
+          <img src="gambar/foto_ruang/TI_14/ti_14_3.jpg" alt="Ruang Kelas" />
+          <div class="status unavailable">Unavailable</div>
+          <button
+            class="detail-btn"
+            onclick="location.href='detail_ruang/ruang_14.html'"
+          >
+            Detail Ruangan
+          </button>
+          <div class="room-number">RUANGAN TI 14</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

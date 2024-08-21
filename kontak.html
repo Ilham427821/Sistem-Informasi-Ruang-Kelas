@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak</title>
+    <link rel="stylesheet" href="styles/kontak.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("YOUR_USER_ID");
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="gambar/logo_polnep.png" alt="Logo" class="logo" />
+          <span>Sistem Informasi Ruang Kelas</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="denahgdg.html">Denah Gedung</a></li>
+            <li><a href="ruangkelas.html">Ruang Kelas</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="profile-icon">
+          <a href="login/loginadmin.html">
+            <img src="gambar/login.png" alt="Profile" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section id="map-section">
+      <div id="map"></div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Hubungi Kami</h2>
+      <form id="contact-form">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="Nim">Nim/Nip</label>
+        <input type="text" id="Nim" name="Nim" required />
+
+        <label for="ruang_kelas">Ruang Kelas (Opsional) </label>
+        <input type="text" id="ruang_kelas" name="ruang_kelas" />
+
+        <label for="comment">Pesan</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <h3>Follow Us</h3>
+      <div class="social-media">
+        <a href="https://www.instagram.com/mediapolnep/"
+          ><img src="gambar/logo_kontak/instagram.png" alt="Instagram"
+        /></a>
+        <a
+          href="https://api.whatsapp.com/send/?phone=%2B6281256074059&text&type=phone_number&app_absent=0"
+          ><img src="gambar/logo_kontak/whatsapp.png" alt="WhatsApp"
+        /></a>
+        <a href="https://www.tiktok.com/@mediapolnep"
+          ><img src="gambar/logo_kontak/tiktok.png" alt="TikTok"
+        /></a>
+        <a href="https://www.facebook.com/mediapolnep"
+          ><img src="gambar/logo_kontak/facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.youtube.com/channel/UCpsN-yFT_LNOBVkpMnkoy0A"
+          ><img src="gambar/logo_kontak/youtube.png" alt="YouTube"
+        /></a>
+      </div>
+      <hr />
+    </footer>
+
+    <script>
+      var map = L.map("map").setView([-0.064471, 109.344641], 17);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([-0.064471, 109.344641])
+        .addTo(map)
+        .bindPopup("Politeknik Negeri Pontianak")
+        .openPopup();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var nim = document.getElementById("Nim").value;
+          var ruang_kelas = document.getElementById("ruang_kelas").value;
+          var comment = document.getElementById("comment").value;
+
+          // Validate NIM/NIP as integer
+          if (!Number.isInteger(parseInt(nim))) {
+            alert("NIM/NIP harus berupa angka.");
+            return;
+          }
+
+          // Send email using EmailJS
+          emailjs
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+              name: name,
+              nim: nim,
+              ruang_kelas: ruang_kelas,
+              comment: comment,
+            })
+            .then(
+              function (response) {
+                alert("Pesan berhasil dikirim!");
+                window.location.href = "thanks.html";
+              },
+              function (error) {
+                alert("Pesan gagal dikirim. Silakan coba lagi.");
+              }
+            );
+        });
+    </script>
+  </body>
+</html>
