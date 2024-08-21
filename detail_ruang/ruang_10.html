@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Ruangan Kelas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/detail_ruang.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="../gambar/logo_polnep.png" alt="Logo" class="logo" />
+          <span>Sistem Informasi Ruang Kelas</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../denahgdg.html">Denah Gedung</a></li>
+            <li><a href="../ruangkelas.html">Ruang Kelas</a></li>
+            <li><a href="../kontak.html">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="profile-icon">
+          <a href="../login/loginadmin.html">
+            <img src="../gambar/login.png" alt="Profile" />
+          </a>
+        </div>
+      </div>
+      <div class="time-container">
+        <script src="javascript/livetime.js"></script>
+        <span id="time"></span>
+      </div>
+    <main>
+      <section class="hero">
+        <h1>Ruangan Kelas TI 10</h1>
+        <img src="../gambar/foto_ruang/Ti_10/ti_10_4.jpg" alt="Ruangan Kelas TI 10" />
+        <p>
+          Ruangan kelas yang nyaman dan lengkap untuk kegiatan belajar mengajar
+        </p>
+      </section>
+      <section class="description">
+        <h2>Deskripsi Ruangan</h2>
+        <p>
+          Ruangan Kelas TI 10 dilengkapi:
+        </p>
+        <ul>
+          <li><i class="fas fa-times" style="color: red"></i> Proyektor</li>
+          <li><i class="fas fa-snowflake"></i> AC</li>
+          <li><i class="fas fa-chalkboard"></i> Whiteboard</li>
+          <li><i class="fas fa-table"></i> Meja dan Kursi</li>
+        </ul>
+      </section>
+      <section class="details">
+        <h2>Informasi Detail</h2>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <h3>Kapasitas</h3>
+            <p>30 siswa</p>
+          </div>
+          <div class="detail-item">
+            <h3>Dimensi</h3>
+            <p>-</p>
+          </div>
+          <div class="detail-item">
+            <h3>Lokasi</h3>
+            <p>Gedung Teori, Lantai 2</p>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <h2>Galeri Foto</h2>
+        <div class="photo-grid">
+          <img src="../gambar/foto_ruang/Ti_10/ti_10_1.jpg" alt="Foto 1" class="lightbox-trigger"/>
+          <img src="../gambar/foto_ruang/Ti_10/ti_10_2.jpg" alt="Foto 2" class="lightbox-trigger"/>
+          <img src="../gambar/foto_ruang/Ti_10/ti_10_3.jpg" alt="Foto 3" class="lightbox-trigger"/>
+        </div>
+      </section>
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" />
+      </div>
+      <section class="schedule">
+        <h2>Jadwal Penggunaan</h2>
+        <table>
+          <tr>
+            <th>Hari</th>
+            <th>Waktu</th>
+            <th>Kelas</th>
+          </tr>
+          <tr>
+            <td>Kamis</td>
+            <td>08:00 - 10:00</td>
+            <td>Web design</td>
+          </tr>
+          <!-- Tambahkan jadwal lainnya di sini -->
+        </table>
+      </section>
+    </main>
+    <footer>
+      <div class="pesan-ruang">
+        <h3>Pesan Ruang</h3>
+        <p>Ingin memesan ruangan? Klik tombol di bawah ini!</p>
+        <button><a href="../kontak.html">Pesan Ruangan</a></button>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeLightbox = document.querySelector(".lightbox-close");
+
+        document.querySelectorAll(".lightbox-trigger").forEach((item) => {
+          item.addEventListener("click", function () {
+            lightbox.style.display = "block";
+            lightboxImg.src = this.src;
+          });
+        });
+
+        closeLightbox.addEventListener("click", function () {
+          lightbox.style.display = "none";
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener("click", function (e) {
+          if (e.target == lightbox) {
+            lightbox.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
