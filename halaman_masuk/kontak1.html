@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak</title>
+    <link rel="stylesheet" href="../styles/kontak.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="../gambar/logo_polnep.png" alt="Logo" class="logo" />
+          <span>Sistem Informasi Ruang Kelas</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index1.html">Beranda</a></li>
+            <li><a href="denahgdg1.html">Denah Gedung</a></li>
+            <li><a href="ruangkelas1.html">Ruang Kelas</a></li>
+            <li><a href="kontak1.html" class="active">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="profile-icon" id="profile-icon">
+          <!-- Profile menu will be populated by JavaScript -->
+        </div>
+      </div>
+    </header>
+
+    <section id="map-section">
+      <div id="map"></div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Hubungi Kami</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Nim/Nip</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="comment">Komentar</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <h3>Follow Us</h3>
+      <div class="social-media">
+        <a href="https://www.instagram.com/mediapolnep/"
+          ><img src="../gambar/logo_kontak/instagram.png" alt="Instagram"
+        /></a>
+        <a
+          href="https://api.whatsapp.com/send/?phone=%2B6281256074059&text&type=phone_number&app_absent=0"
+          ><img src="../gambar/logo_kontak/whatsapp.png" alt="WhatsApp"
+        /></a>
+        <a href="https://www.tiktok.com/@mediapolnep"
+          ><img src="../gambar/logo_kontak/tiktok.png" alt="TikTok"
+        /></a>
+        <a href="https://www.facebook.com/mediapolnep"
+          ><img src="../gambar/logo_kontak/facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.youtube.com/channel/UCpsN-yFT_LNOBVkpMnkoy0A"
+          ><img src="../gambar/logo_kontak/youtube.png" alt="YouTube"
+        /></a>
+      </div>
+      <hr />
+    </footer>
+
+    <script>
+      var map = L.map("map").setView([-0.064471, 109.344641], 17);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([-0.064471, 109.344641])
+        .addTo(map)
+        .bindPopup("Politeknik Negeri Pontianak")
+        .openPopup();
+    </script>
+    <script src="../javascript/logoutadmin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami</title>
+    <link rel="stylesheet" href="../styles/about.css" />
+  </head>
+  <body>
+    <main>
+      <div class="about-section">
+        <a href="index1.html" class="back-button">
+          <img src="gambar/back.png" alt="Back" class="back-img" />
+        </a>
+        <h2>Tentang Kami</h2>
+        <div class="projects">
+          <div class="project">
+            <img
+              src="gambar/developer1.jpg"
+              width="150"
+              height="150"
+              alt="Developer 1"
+            />
+            <h3>Aspariansyah</h3>
+            <p>Deskripsi singkat tentang Developer 1.</p>
+            <button onclick="openModal('modal1')">Lihat Detail</button>
+            <p>
+              <a href="https://www.instagram.com/developer1" target="_blank"
+                >Instagram</a
+              >
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="gambar/developer2.jpg"
+              width="150"
+              height="150"
+              alt="Developer 2"
+            />
+            <h3>Muhamad Syafarudin Ilham</h3>
+            <p>Deskripsi singkat tentang Developer 2.</p>
+            <button onclick="openModal('modal2')">Lihat Detail</button>
+            <p>
+              <a href="https://www.instagram.com/developer2" target="_blank"
+                >Instagram</a
+              >
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="gambar/developer3.jpg"
+              width="150"
+              height="150"
+              alt="Developer 3"
+            />
+            <h3>Muhammad Hengki</h3>
+            <p>Deskripsi singkat tentang Developer 3.</p>
+            <button onclick="openModal('modal3')">Lihat Detail</button>
+            <p>
+              <a href="https://www.instagram.com/developer3" target="_blank"
+                >Instagram</a
+              >
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="gambar/developer4.jpg"
+              width="150"
+              height="150"
+              alt="Developer 4"
+            />
+            <h3>Radisa</h3>
+            <p>Deskripsi singkat tentang Developer 4.</p>
+            <button onclick="openModal('modal4')">Lihat Detail</button>
+            <p>
+              <a href="https://www.instagram.com/developer4" target="_blank"
+                >Instagram</a
+              >
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="gambar/developer5.jpg"
+              width="150"
+              height="150"
+              alt="Developer 5"
+            />
+            <h3>Zella</h3>
+            <p>Deskripsi singkat tentang Developer 5.</p>
+            <button onclick="openModal('modal5')">Lihat Detail</button>
+            <p>
+              <a href="https://www.instagram.com/developer5" target="_blank"
+                >Instagram</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Politeknik Negeri Pontianak</p>
+    </footer>
+
+    <!-- Modal Sections -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Aspariansyah (Ketua)</h2>
+        <p>Detail tentang Developer 1.</p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Muhamad Syafarudin Ilham</h2>
+        <p>Detail tentang Developer 2.</p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Nama Developer 3</h2>
+        <p>Detail tentang Developer 3.</p>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Nama Developer 4</h2>
+        <p>Detail tentang Developer 4.</p>
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h2>Nama Developer 5</h2>
+        <p>Detail tentang Developer 5.</p>
+      </div>
+    </div>
+
+    <script>
+      function openModal(id) {
+        document.getElementById(id).style.display = "block";
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    </script>
+  </body>
+</html>
