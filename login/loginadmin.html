@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../gambar/logo_polnep.png" alt="Logo Polnep" class="logo" />
+    </div>
+
+    <div class="login-box">
+      <a href="../index.html">
+        <img src="../gambar/back_white.png" alt="Back" class="back-img" />
+      </a>
+      <div class="login-header">
+        <header>Login</header>
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Nama"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Password"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="forgot">
+        <section>
+          <input type="checkbox" id="check" />
+          <label for="check">Remember Me</label>
+        </section>
+        <section>
+          <a href="#">Forgot Password?</a>
+        </section>
+      </div>
+      <div class="input-submit">
+        <button class="submit-btn" id="submit">Sign In</button>
+      </div>
+      <!-- <div class="sign-up-link">
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div> -->
+    </div>
+
+    <!-- Tambahkan tag script sebelum penutup tag body -->
+    <script src="../javascript/loginadmin.js"></script>
+  </body>
+</html>
