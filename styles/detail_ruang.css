@@ -1,0 +1,282 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.description,
+.details,
+.gallery,
+.schedule {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+ul li i {
+  margin-right: 10px;
+}
+
+.detail-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.detail-item {
+  flex: 1;
+  padding: 10px;
+}
+
+.photo-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.photo-grid img {
+  max-width: 30%;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #333;
+  color: white;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-info,
+.social-media,
+.map,
+.pesan-ruang {
+  margin-bottom: 20px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.pesan-ruang button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pesan-ruang button a {
+  color: white;
+  text-decoration: none;
+}
+
+.pesan-ruang button:hover {
+  background: #0056b3;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0044cc;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+h1 {
+  color: white;
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect to make text bold, white, and add pulse animation */
+nav ul li a:hover {
+  font-weight: bold;
+  color: white;
+  animation: pulse 1s infinite; /* Apply pulse animation on hover */
+}
+
+.profile-icon img {
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.profile-icon a:hover img {
+  animation: pulse 1s infinite; /* Apply pulse animation on hover */
+}
+
+.profile-icon a {
+  border-image: auto;
+  text-decoration: none;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Lightbox content (image) */
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation: zoom 0.6s;
+}
+
+/* Add Animation */
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Lightbox close button */
+.lightbox-close {
+  position: absolute;
+  top: 50px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.photo-grid img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Style to make the photo links (that trigger lightbox) inline-block */
+.photo-grid a {
+  display: inline-block;
+  margin: 10px;
+}
